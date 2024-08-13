@@ -10,7 +10,7 @@ const AccessoriesReport = () => {
 
     useEffect(() => {
         // Fetch data when component mounts
-        axios.get('http://localhost:8080/api/accessories')
+        axios.get('http://localhost:8080/api/accessories/')
             .then(response => {
                 setAccessories(response.data);
             })
