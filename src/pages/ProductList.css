@@ -1,0 +1,283 @@
+.back {
+  background-image: url('https://wallpaperaccess.com/full/5821444.jpg');
+  background-size: cover;
+  color: #fff;
+  width: 100%;
+
+}
+
+.product-grid {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #fff;
+  margin-top: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgb(0, 255, 255);
+}
+
+.product-grid:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgb(2, 167, 193);
+}
+
+.product-grid:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+  border-radius: 15px;
+}
+
+.product-grid:hover:before {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.product-grid .product-image {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease;
+  height: 60%; /* Adjusted height */  
+}
+
+.product-grid:hover .product-image {
+  transform: rotateY(180deg);
+}
+
+.product-grid .product-image a {
+  display: block;
+}
+
+.product-grid .product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-grid:hover .product-image img {
+  transform: scale(1.2);
+}
+
+.product-discount-label {
+  color: #fff;
+  background-color: #00f;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 2;
+  box-shadow: 0 0 10px #00f;
+}
+
+.product-grid .social {
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+  list-style: none;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-grid .social li {
+  opacity: 0;
+  transform: translateY(300%);
+  transition: all 0.5s ease 0s;
+}
+
+.product-grid .social li:nth-child(2) {
+  transition-delay: 0.05s;
+}
+
+.product-grid .social li:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.product-grid .social li:nth-child(4) {
+  transition-delay: 0.15s;
+}
+
+.product-grid:hover .social li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-grid .social li a {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  margin: 0 2px 10px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.product-grid .social li a:hover {
+  color: #fff;
+  background-color: rgb(232, 232, 241);
+  box-shadow: 0 6px 20px rgba(0, 0, 255, 0.6);
+}
+
+.product-grid .product-content {
+  padding: 18px;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+.product-grid .product-content:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+.product-grid .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fff;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.product-grid .title a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.product-grid .title a:hover {
+  color: rgb(13, 15, 15);
+}
+
+.product-grid .price {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 0 0 5px #00f;
+}
+
+.product-grid .price span {
+  color: #777;
+  margin: 0 0 0 5px;
+  font-weight: 300;
+  text-decoration: line-through;
+  display: inline-block;
+}
+
+.product-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 102, 0));
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1000px) rotateX(0deg);
+  animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: perspective(1000px) translateY(0) rotateX(0deg);
+  }
+
+  50% {
+    transform: perspective(1000px) translateY(-10px) rotateX(10deg);
+  }
+
+  100% {
+    transform: perspective(1000px) translateY(0) rotateX(0deg);
+  }
+}
+
+.product-button:hover {
+  background: linear-gradient(90deg, #0ff, #00f);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+.product-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.product-button:hover::before {
+  width: 0;
+  height: 0;
+}
+
+.product-button span {
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 990px) {
+  .product-grid {
+    margin-bottom: 30px;
+  }
+}
+
+.pocial {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: red;
+  font-family: 'Verdana', sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  animation: new 0.5s linear infinite;
+  margin-top: -50px;
+}
+
+.pocial a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes new {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0.95);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}

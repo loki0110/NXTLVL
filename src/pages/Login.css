@@ -1,0 +1,247 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 14px; /* Smaller base font size */
+}
+
+/* Main Wrapper for the Login Page */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('./W1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%; /* Reduced padding */
+  padding-top: 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for the border effect */
+.login-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 8px solid red;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.login-wrapper:hover::before {
+  border-color: #ff0000;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Login Box Styles */
+.login-box {
+  width: 400px; /* Reduced width */
+  padding: 40px; /* Reduced padding */
+  background: rgba(6, 0, 2, 0.909);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for the border effect */
+.login-box::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 10px solid red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.login-box:hover::before {
+  border-color: #ff0000;
+  box-shadow: 0 0 20px rgba(41, 36, 36, 0.8);
+}
+
+/* Login Box Heading */
+.login-box h2 {
+  margin: 0 0 15px;
+  color: #f2e2e2;
+  text-align: center;
+  font-size: 18px; /* Smaller font size */
+}
+
+/* User Input Box */
+.login-box .user-box {
+  position: relative;
+  width: 100%;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 8px 0; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  color: #ff0000;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 0;
+  font-size: 14px; /* Smaller font size */
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -15px;
+  left: 0;
+  color: #f2f9f9;
+  font-size: 12px;
+}
+
+/* Error Text */
+.error-text {
+  color: #ff4d4d;
+  font-size: 12px; /* Smaller font size */
+  margin-top: 5px;
+}
+
+/* Submit Button Styles */
+.submit-button {
+  display: inline-block;
+  padding: 8px 15px; /* Reduced padding */
+  color: #fff;
+  font-size: 14px; /* Smaller font size */
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 20px; /* Reduced margin */
+  letter-spacing: 1px;
+  background: #000;
+  border: 2px solid #ff0000; /* Same border as the signup button */
+  border-radius: 8px; /* Same border-radius as the signup button */
+  cursor: pointer;
+  position: relative;
+}
+
+.submit-button:hover {
+  background: #ff0000;
+  color: #000;
+  border-radius: 8px; /* Ensure the border-radius stays consistent */
+  box-shadow: 0 0 5px #000000,
+              0 0 25px #000000,
+              0 0 50px #000000,
+              0 0 100px #000000;
+}
+
+/* Link Styles */
+.login-box form a {
+  display: inline-block;
+  padding: 8px 15px; /* Reduced padding */
+  color: #fff;
+  font-size: 14px; /* Smaller font size */
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 20px; /* Reduced margin */
+  letter-spacing: 1px;
+  background: #000;
+}
+
+.login-box a:hover {
+  background: #ff0000;
+  color: #000;
+  border-radius: 7px;
+  box-shadow: 0 0 5px #000000,
+    0 0 25px #000000,
+    0 0 50px #000000,
+    0 0 100px #000000;
+}
+
+/* Additional Links Styles */
+.additional-links {
+  margin-top: 15px;
+  text-align: center;
+  color: #faf7f7;
+}
+
+.additional-links a {
+  padding: 8px 15px; /* Reduced padding */
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; /* Smaller font size */
+  text-transform: uppercase;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  transition: 0.5s;
+  margin: 10px 0; /* Reduced margin */
+  background: #000;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px; /* Smaller padding */
+  text-decoration: none;
+  font-size: 14px; /* Smaller font size */
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px; /* Smaller font size */
+}

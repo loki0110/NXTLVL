@@ -1,0 +1,140 @@
+.pageBackground {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/wp6871310.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000000; /* Black text for page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.formContainer {
+    width: 80%; /* Adjusted width */
+    max-width: 500px; /* Further reduced maximum width */
+    padding: 15px; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    border-radius: 8px;
+    backdrop-filter: blur(7px); /* Apply blur effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.header {
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+}
+  
+.header h1 {
+    margin: 0;
+    font-size: 24px; /* Adjusted font size */
+    color: #000000; /* Black color for header */
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.card {
+    background-color: #ffffff; /* White background for card */
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px; /* Reduced margin */
+}
+  
+.inputBox {
+    margin-bottom: 10px; /* Reduced margin */
+}
+  
+.label {
+    display: block;
+    margin-bottom: 4px; /* Reduced margin */
+    font-weight: bold;
+    color: #000000; /* Black color for labels */
+}
+  
+.inputBox input {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    border: 2px solid #000000; /* Reduced border width */
+    border-radius: 4px;
+    background-color: #fffdfd; /* Light grey for input fields */
+}
+  
+.formRadios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap */
+    margin-bottom: 15px; /* Reduced margin */
+}
+  
+.formRadio {
+    display: flex;
+    align-items: center;
+}
+  
+.formRadio label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduced gap */
+    font-weight: bold;
+    color: #000000; /* Black color for radio labels */
+}
+  
+.formRadio input {
+    height: 18px; /* Reduced height */
+    width: 18px; /* Reduced width */
+    margin-right: 8px; /* Reduced margin */
+}
+  
+.icon {
+    width: 20px; /* Reduced icon size */
+    height: 20px; /* Reduced icon size */
+}
+  
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px; /* Reduced margin */
+}
+  
+.table th, .table td {
+    padding: 8px; /* Reduced padding */
+    border: 2px solid #000000; /* Reduced border width */
+    text-align: left;
+    font-size: medium; /* Adjusted font size */
+    color: #000000; /* Dark grey for table text */
+}
+  
+.table tfoot tr td {
+    font-weight: bold;
+    text-align: right;
+}
+  
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Adjusted padding for smaller button */
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff0000; /* Red color for button */
+    cursor: pointer;
+}
+  
+.buttonFull {
+    width: 100%;
+}
+  
+.button svg {
+    margin-right: 8px; /* Reduced margin */
+}
+  
+/* New class for address heading */
+.addressHeading {
+    color: #000000; /* Black color for address heading */
+}

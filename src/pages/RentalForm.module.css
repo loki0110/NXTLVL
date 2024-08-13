@@ -1,0 +1,197 @@
+/* Background for the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://wallpaperaccess.com/full/2552172.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* Booking Form Styling */
+  .bookingForm {
+    box-sizing: border-box;
+    padding: 3em;
+    background: rgba(20, 20, 30, 0.85); /* Darker background for form */
+    width: 60%;
+    margin: 7% auto; /* This pushes the form down */
+    color: #e0e0e0; /* Light text color */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Sub Heading Styling */
+  .subHeading {
+    text-align: left;
+    font-size: 24px;
+    color: #ff002b; /* Cool blue color */
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+  
+  /* Flex Containers */
+  .mainFlex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  
+  .triple {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  
+  /* Field Styling */
+  .field {
+    flex: 1;
+    margin-right: 15px;
+  }
+  
+  .field:last-child {
+    margin-right: 0;
+  }
+  
+  /* Input and Textarea Styling */
+  .input,
+  .formControl,
+  .textarea {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* Cool blue border color */
+    background: rgba(255, 255, 255, 0.15); /* Slightly transparent background */
+    color: #e0e0e0; /* Light text color */
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #b0bec5; /* Light placeholder color */
+  }
+  
+  .textarea {
+    height: 100px;
+  }
+  
+  /* Dropdown Menu Styling */
+  .formControl {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 16px;
+    border: 1px solid #ff0000;
+    background: rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
+    border-radius: 5px;
+    appearance: none; /* Remove default styling */
+    background-color: #2c3e50; /* Dark background color for dropdown */
+    background-image: linear-gradient(45deg, transparent 50%, #34495e 50%); /* Gradient effect */
+    background-position: right 0.7em center; /* Position the dropdown arrow */
+    background-repeat: no-repeat; /* Prevent repeating the arrow */
+    background-size: 1.2em auto; /* Size of the dropdown arrow */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .formControl:focus {
+    border-color: #000000; /* Bright blue on focus */
+    outline: none; /* Remove default focus outline */
+    background-color: #34495e; /* Slightly lighter background on focus */
+  }
+  
+  .formControl option {
+    color: #000; /* Text color for dropdown options */
+    background-color: #fff; /* Background color for options */
+  }
+  
+  .formControl::-ms-expand {
+    display: none; /* Remove default dropdown arrow in IE */
+  }
+  
+  .formControl::before {
+    content: '▼'; /* Custom arrow */
+    color: #e0e0e0;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Radio Buttons Section Styling */
+  .radioSection {
+    margin-bottom: 1.5em;
+  }
+  
+  .radioButtons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .radioButtons li {
+    margin-right: 15px;
+  }
+  
+  .radioButtons label {
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  
+  /* Email Field Styling */
+  .emailField {
+    margin-bottom: 20px; /* Adds space below the email field */
+  }
+  
+  /* Buttons Styling */
+  .submitButton,
+  .resetButton {
+    display: inline-block;
+    padding: 0.8em 2em;
+    font-size: 16px;
+    background: #ff0000; /* Cool blue background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover,
+  .resetButton:hover {
+    background: #000000; /* Slightly darker blue on hover */
+  }
+  
+  /* Clearfix */
+  .clear {
+    clear: both;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .bookingForm {
+      width: 90%;
+    }
+  
+    .mainFlex {
+      flex-direction: column;
+    }
+  
+    .field {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+  
+    .triple {
+      flex-direction: column;
+    }
+  
+    .text11,
+    .text22,
+    .text33 {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+  }
+  

@@ -1,0 +1,17 @@
+.productCard {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .productCard h5 {
+    margin-top: 0;
+  }
+  
+  .actionButton {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  

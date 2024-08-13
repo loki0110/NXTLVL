@@ -1,0 +1,235 @@
+/* Scoped styles for the ServiceBooking component */
+
+/* Container Styles */
+.service-booking-container {
+  width: 100%;
+  max-width: 1200px; /* Slightly increased max-width */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the container */
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+}
+
+/* Background Image Styles */
+body.service-booking-background {
+  background: url('https://wallpapers.com/images/file/black-texture-background-o2umux6xkwuejpwf.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure background is behind all content */
+}
+
+/* Header Styles */
+.service-booking-header {
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.service-booking-header h1 {
+  font-size: 2.5em; /* Reduced font size */
+  color: beige;
+  text-shadow: 0 4px 12px rgba(255, 111, 97, 0.8);
+}
+
+.service-booking-header p {
+  font-size: 1em; /* Reduced font size */
+  color: #ccc;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Styles */
+.service-booking-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Adjusted to fit smaller header */
+  padding-top: 30px; /* Reduced padding */
+}
+
+/* Booking Form Styles */
+.service-booking-form {
+  background: rgba(0, 0, 0, 0.9); /* Dark background for form */
+  padding: 20px; /* Reduced padding */
+  border-radius: 10px; /* Reduced border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Reduced shadow size */
+  width: 100%;
+  max-width: 600px; /* Increased maximum width */
+  position: relative;
+  backdrop-filter: blur(60px); /* Slightly reduced blur effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-booking-form:hover {
+  transform: translateY(-6px); /* Slightly reduced lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Adjusted shadow size */
+}
+
+/* Form Heading */
+.service-booking-form h2 {
+  font-size: 1.8em; /* Further reduced font size */
+  color: #f1f9fb;
+  margin-bottom: 10px; /* Adjusted margin */
+  text-shadow: 0 4px 8px rgba(0, 209, 255, 0.8);
+}
+
+/* Form Labels and Inputs */
+.service-booking-form label {
+  display: block;
+  margin: 6px 0 3px; /* Reduced margin */
+  font-size: 0.9em; /* Reduced font size */
+  color: #e6f10d;
+}
+
+.service-booking-form input,
+.service-booking-form select,
+.service-booking-form .service-date-picker {
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px; /* Reduced border radius */
+  margin-bottom: 10px; /* Adjusted margin */
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.85em; /* Reduced font size */
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.service-booking-form input::placeholder {
+  color: #aaa;
+}
+
+.service-booking-form input:focus,
+.service-booking-form select:focus,
+.service-booking-form .service-date-picker:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00d1ff;
+  outline: none;
+}
+
+/* Dropdown Styles */
+.service-booking-form select {
+  color: #ffffff; /* Neon blue text color */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  border: 1px solid #00d1ff; /* Neon blue border */
+  padding: 6px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  border-radius: 6px; /* Reduced border radius */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+  appearance: none; /* Remove default dropdown arrow */
+  position: relative; /* Position for custom arrow */
+  cursor: pointer;
+  width: 100%; /* Full width for better appearance */
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)); /* Gradient background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  backdrop-filter: blur(8px); /* Blur effect for a futuristic look */
+}
+
+.service-booking-form select:focus {
+  border-color: #e60707; /* Change border color on focus */
+  box-shadow: 0 0 10px 2px rgba(224, 7, 7, 0.5); /* Glow effect on focus */
+}
+
+.service-booking-form select option {
+  color: #fffdfd; /* Neon blue text color */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  padding: 6px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+}
+
+/* Custom arrow for the dropdown */
+.service-booking-form select::after {
+  content: '▼'; /* Unicode character for the arrow */
+  position: absolute;
+  right: 8px; /* Reduced right spacing */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00d1ff; /* Neon blue color */
+  pointer-events: none; /* Ensure the arrow is not clickable */
+}
+
+/* Button Styles */
+.service-booking-form .service-btn-submit {
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 0.9em; /* Reduced font size */
+  color: #fff;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 20px; /* Reduced border radius */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-booking-form .service-btn-submit:hover {
+  background: linear-gradient(90deg, #0056b3, #007bff);
+  transform: translateY(-1px); /* Slightly reduced lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.service-booking-form .service-btn-submit:active {
+  background: #0056b3;
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-booking-form .service-btn-submit:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Date Picker Styles */
+.service-date-picker {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px; /* Reduced border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Reduced shadow size */
+}
+
+.react-datepicker__header {
+  background: #00d1ff;
+  border-bottom: 1px solid #007bff;
+  border-radius: 8px 8px 0 0; /* Reduced border radius */
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: #fff;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: #007bff;
+}
+
+.react-datepicker__day--disabled {
+  color: #555;
+}
+
+/* ServiceBooking.css */
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 8px; /* Reduced margin */
+}

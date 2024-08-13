@@ -1,0 +1,34 @@
+form {
+    margin-top: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 4px solid #fbf3f3;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #0033ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

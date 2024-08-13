@@ -1,0 +1,144 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.services-container {
+    width: 100vw; /* Ensure full width */
+    height: 100vh; /* Ensure full height */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-image: url('https://www.seat.eg/content/dam/public/seat-website/seat-cars/car-maintenance/article-single-image-maintenance/seat-services-and-repair-maintenance.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.services-header {
+    margin-bottom: 50px;
+}
+
+.services-header h1 {
+    font-size: 2.5em;
+    color: black;
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of the cards */
+    justify-content: space-between; /* Distribute space between cards */
+    align-items: flex-start; /* Align items to the start */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    gap: 20px; /* Reduced gap between cards */
+    margin-top: 80px; /* Move cards down further */
+}
+
+.service-card {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for a sleek look */
+    border-radius: 20px; /* Larger border-radius for more modern corners */
+    box-shadow: 0 4px 30px rgba(0, 255, 255, 0.6); /* Larger neon glow */
+    width: 280px; /* Decreased width */
+    margin: 20px; /* Margin on all sides */
+    padding: 20px; /* Reduced padding for more compact cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Ensure the neon glow stays within the card */
+    border: 3px solid rgba(0, 255, 255, 0.6); /* Slightly thicker neon border */
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(0, 255, 255, 0) 70%);
+    z-index: 0;
+    transform: scale(1.5);
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 255, 255, 0.8); /* Stronger neon glow on hover */
+}
+
+.service-icon {
+    font-size: 3.5em; /* Slightly smaller icon size */
+    color: #0ff; /* Neon cyan color */
+    margin-bottom: 20px;
+    z-index: 1; /* Ensure it stays above the glowing effect */
+}
+
+.service-card h2 {
+    font-size: 1.7em; /* Slightly smaller font size for the header */
+    color: #0ff; /* Neon cyan color */
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.service-card p {
+    font-size: 1.1em; /* Slightly smaller font size for the paragraph */
+    color: #ccc; /* Light gray for contrast */
+    z-index: 1;
+}
+
+.futuristic-button {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #ff0099, #493240);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.5), 0 0 60px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.futuristic-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(73, 50, 64, 0.3));
+    transition: all 0.3s ease-in-out;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.futuristic-button:hover {
+    color: white;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.8), 0 0 80px rgba(255, 105, 180, 0.8), 0 0 120px rgba(255, 105, 180, 0.8);
+}
+
+.futuristic-button:hover::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.5), rgba(73, 50, 64, 0.5));
+}

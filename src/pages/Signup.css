@@ -1,0 +1,202 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.signup-wrapper {
+  min-height: 100vh;
+  background: url('./W2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  padding-top: 100px;
+  padding-left: 1000px;
+  align-items: center;
+}
+
+.Signup-box {
+  width: 400px; /* Reduced width for smaller size */
+  padding: 20px; /* Reduced padding */
+  background: rgba(37, 31, 32, 0.897); /* Adjusted opacity */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border: 4px solid red;
+  border-radius: 13px;
+  position: relative;
+}
+
+.Signup-box h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #f2e2e2;
+  text-align: center;
+  font-size: 22px; /* Adjusted font size */
+}
+
+.Signup-box .user-box {
+  position: relative;
+  margin-bottom: 20px; /* Reduced space between fields */
+}
+
+.Signup-box .user-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px; /* Adjusted font size */
+  color: #0cd3ed;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.Signup-box .user-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 16px; /* Adjusted font size */
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.Signup-box .user-box input:focus ~ label,
+.Signup-box .user-box input:valid ~ label {
+  top: -14px;
+  left: 0;
+  color: #f2f9f9;
+  font-size: 12px; /* Font size when focused */
+}
+
+.Signup-box .submit-button {
+  display: inline-block;
+  padding: 10px 20px; /* Reduced padding */
+  color: #f3f9f9;
+  font-size: 16px; /* Adjusted font size */
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 15px; /* Adjusted margin */
+  letter-spacing: 4px;
+  position: relative;
+  border: 2px solid transparent;
+  background: transparent;
+}
+
+/* Hover Effect */
+.Signup-box .submit-button:hover {
+  background: #24cfd8; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px #c71212, /* Inner shadow */
+              0 0 25px #f40303, /* Outer shadow */
+              0 0 50px #e04e6b, /* More outer shadow */
+              0 0 100px #b72929; /* Maximum outer shadow */
+}
+
+.Signup-box .submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.Signup-box .submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(90deg, transparent, #d60d1e);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.Signup-box .submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 7px;
+  background: linear-gradient(180deg, transparent, #e00824);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+.Signup-box .submit-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(270deg, transparent, #f60a39);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+.Signup-box .submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 7px;
+  background: linear-gradient(360deg, transparent, #de0408);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+.additional-links {
+  margin-top: 15px; /* Adjusted spacing */
+  text-align: center;
+  color: #faf7f7;
+}
+
+.additional-links a {
+  color: #f3f9f9;
+  text-decoration: none;
+  font-size: 16px; /* Adjusted font size */
+}
+
+.additional-links a:hover {
+  text-decoration: underline;
+}
+
+.additional-links p {
+  margin: 10px 0;
+}
+
+.error-message {
+  color: #ffffff;
+  font-size: 12px; /* Adjusted font size */
+  margin-top: 5px;
+}

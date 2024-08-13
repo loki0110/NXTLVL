@@ -1,0 +1,217 @@
+.Home {
+  font-family: "Roboto", sans-serif;
+}
+
+.Home .container {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 900px;
+}
+
+.Home .header {
+  background-image: url("https://wallpapercave.com/wp/wp12571804.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.Home .content {
+  font-size: 1.2rem;
+  margin: auto;
+  max-width: 100%;
+}
+
+.Home .content h1 {
+  font-size: 2rem; /* Decrease font size for the heading */
+  color: #f9f9f2;
+  margin-bottom: 0.5rem; /* Adjust margin */
+}
+
+.Home .content p {
+  font-size: 1rem; /* Decrease font size for the paragraph */
+}
+
+.Home .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Home .nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 2.8rem;
+}
+
+.Home .nav .logo img {
+  height: 110px;
+  margin-right: 10px;
+}
+
+.Home .nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Home .nav li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(250, 249, 250);
+  background: linear-gradient(135deg, #ec0a1c, #f10505);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin-right: 2em;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.Home .nav li a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(73, 50, 64, 0.3));
+  transition: all 0.3s ease-in-out;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.Home .nav li a:hover {
+  color: #020202;
+  background: linear-gradient(135deg, #f10505, #ec0a1c);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 80px rgba(0, 0, 0, 0.8), 0 0 120px rgba(0, 0, 0, 0.8);
+}
+
+.Home .nav li a:hover::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.Home .highlight:hover {
+  background-color: #ff1a30;
+}
+
+.Home .selected {
+  font-weight: bold;
+}
+
+/* Base styling for the futuristic button */
+.Home .highlight {
+  background: linear-gradient(135deg, rgba(236, 10, 28, 0.8), rgba(255, 20, 20, 0.8));
+  color: white;
+  padding: 0.5rem; /* Reduce padding */
+  text-decoration: none;
+  border-radius: 8px; /* Slightly less rounded corners */
+  font-weight: bold; /* Make the text stand out */
+  text-transform: uppercase; /* Modern, uppercase text */
+  font-size: 1.7rem; /* Decrease font size */
+  display: inline-block; /* Ensure proper padding and margin handling */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(236, 10, 28, 0.6); /* Enhanced shadow effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+}
+
+/* Before pseudo-element for added glow effect */
+.Home .highlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(236, 10, 28, 0.4), rgba(255, 20, 20, 0.4));
+  transition: all 0.3s ease;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* Hover effect for futuristic feel */
+.Home .highlight:hover {
+  background: linear-gradient(135deg, rgba(255, 20, 20, 0.8), rgba(236, 10, 28, 0.8));
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 30px rgba(236, 10, 28, 0.8); /* Intensified shadow on hover */
+}
+
+/* Hover effect for pseudo-element */
+.Home .highlight:hover::before {
+  background: radial-gradient(circle, rgba(255, 20, 20, 0.6), rgba(236, 10, 28, 0.6));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Home footer {
+  background-color: #000;
+  color: #f9eeee;
+  padding: 2rem;
+}
+
+.Home footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Home footer p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .Home .content {
+    margin: 2rem auto 0;
+    font-size: 1rem;
+  }
+
+  .Home .nav ul {
+    flex-direction: column;
+  }
+
+  .Home .nav li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .Home .nav .highlight {
+    display: none;
+  }
+
+  .Home footer ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Home footer li {
+    margin: 2rem;
+    text-align: center;
+  }
+}

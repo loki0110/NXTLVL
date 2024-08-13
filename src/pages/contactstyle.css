@@ -1,0 +1,80 @@
+/* Global Styles */
+:root {
+  --primary-color: #ff0000; /* Red */
+  --secondary-color: #000000; /* Black */
+  --text-color: #ffffff; /* White */
+}
+
+/* Contact Page Background */
+.contact-background {
+  background-color: var(--secondary-color);
+  background-image: url('https://wallpapercave.com/wp/wp5055251.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 100px 0; /* Increased top padding to bring the container down */
+  color: var(--text-color);
+}
+
+/* Container Styles */
+.contact-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* Heading Styles */
+.display-4 {
+  color: var(--primary-color);
+}
+
+/* Contact Info Styles */
+.contact-info h3 {
+  color: var(--primary-color);
+}
+
+.contact-info address {
+  color: var(--text-color);
+  font-size: 1.5rem; /* Increase font size for email and phone */
+}
+
+.contact-info address strong {
+  font-size: 1.3rem; /* Increase font size for labels */
+}
+
+/* Form Styles */
+.contact-form .form-control {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--text-color);
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background: linear-gradient(135deg, #ff0000, #000000);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #000000, #ff0000);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.8);
+  color: #000000;
+}

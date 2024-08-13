@@ -1,0 +1,122 @@
+/* Scoped styles for the CarItem component */
+
+/* Background Image Styles */
+body.car-item-background {
+  background: url('https://static.vecteezy.com/system/resources/previews/000/518/751/original/vector-black-triangular-abstract-texture-low-light-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure background is behind all content */
+  margin: 0; /* Remove margin from body */
+}
+
+/* Container Styles */
+.car__item {
+  border: 10px solid rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 5px;
+  background: rgb(30, 25, 25); /* Card background */
+  position: relative; /* Ensure the card is above the background */
+}
+
+.car__item-info span i {
+  color: #f92626;
+  font-size: 1.1rem;
+}
+
+.car__item-info span {
+  color: rgb(254, 251, 251); /* Text color */
+}
+
+/* Button Styles */
+.car__item-btn {
+  border-radius: 0;
+  border: 5px solid #000000;
+  outline: none;
+  background: rgb(255, 255, 255);
+  color: #ff0808;
+  padding: 10px 20px; /* Increased padding for a larger button */
+  width: 100%; /* Make button full width */
+  transition: background 0.3s, color 0.3s;
+  text-align: center; /* Center the text inside the button */
+}
+
+.car__item-btn a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color from button */
+  font-weight: 500;
+}
+
+.car__item-btn:hover {
+  background: #000000;
+  color: white;
+}
+
+.car__btn-rent {
+  border-radius: 4px; /* Rounded corners */
+  margin: 0 auto; /* Center the button */
+  display: block; /* Center the button */
+}
+
+.car__item-content h4 {
+  font-size: 1.8rem;
+  color: rgb(250, 244, 244); /* Car model name color */
+}
+
+.car__item-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(251, 245, 245); /* Price color */
+}
+
+@media only screen and (max-width: 992px) {
+  .car__item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .car__item h6 {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .car__item-info {
+    flex-wrap: wrap;
+  }
+
+  .car__item-info span {
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .car__item-btn {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .car__item h4 {
+    font-size: 1rem;
+  }
+
+  .car__item h6 {
+    font-size: 0.9rem;
+  }
+
+  .car__item-info span {
+    font-size: 0.7rem;
+  }
+
+  .car__item-info span i {
+    font-size: 0.9rem;
+  }
+
+  .car__item-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

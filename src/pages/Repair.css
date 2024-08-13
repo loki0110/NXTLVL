@@ -1,0 +1,232 @@
+/* Global Styles */
+.image-background {
+    background-image: url('https://th.bing.com/th/id/OIP.j8pdo2VjPpEAjOTDR3j7rAAAAA?rs=1&pid=ImgDetMain');
+    position: relative; /* Fix the background to cover the entire page */
+    top: -32px;
+    left: 0;
+    bottom: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 40vh;
+    background-size: cover; /* Cover the entire background without stretching */
+    background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+}
+
+/* Container Styles */
+.repair-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 2em;
+    position: relative;
+    min-height: 100vh;
+    backdrop-filter: blur(20px); /* Maximum blur effect */
+    border-radius: 10px; /* Rounded corners for a modern touch */
+}
+
+/* Header Styles */
+.repair-header {
+    margin-bottom: 60px; /* Adjusted margin */
+}
+
+.repair-header h1 {
+    font-size: 2.5em; /* Reduced font size */
+    color: #00d1ff; /* Neon blue color */
+    text-shadow: 0 4px 8px rgba(0, 209, 255, 0.8); /* Intense neon glow effect */
+}
+
+.repair-header p {
+    font-size: 1em; /* Reduced font size */
+    color: #ccc;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+}
+
+/* Content Styles */
+.repair-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced spacing between cards */
+    justify-content: center; /* Center align cards */
+}
+
+/* Card Styles */
+.repair-card {
+    background: rgba(0, 0, 0, 0.8); /* Dark background with high opacity for sleek look */
+    border-radius: 20px; /* More rounded corners for a sleek look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    width: calc(33.333% - 15px); /* Adjusted width for smaller cards */
+    padding: 20px; /* Reduced padding */
+    position: relative; /* Ensure pseudo-element is positioned correctly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    color: #fff;
+    overflow: hidden; /* Ensure pseudo-element and effects are contained */
+    border: 5px solid rgb(6, 191, 219); /* Transparent border for neon effect */
+    perspective: 1000px; /* Perspective for 3D effects */
+}
+
+/* Card Edge Effect */
+.repair-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid rgb(255, 0, 0); /* Adjusted border size */
+    border-radius: 20px; /* Consistent with card radius */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.repair-card:hover::before {
+    border-color: #00d1ff; /* Neon blue border color */
+    transform: scale(1.1); /* Slightly scale the border effect */
+}
+
+.repair-card:hover {
+    transform: translateY(-10px) rotateY(10deg); /* Lift and rotate effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* Card Icon */
+.repair-icon {
+    font-size: 3.5em; /* Slightly smaller icon size */
+    color: #0ce6e9; /* Neon blue color */
+    margin-bottom: 15px; /* Adjusted margin */
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+.repair-card:hover .repair-icon {
+    color: #00ff99; /* Change color on hover */
+    transform: rotateZ(360deg); /* Spin effect on hover */
+}
+
+/* Card Heading */
+.repair-card h2 {
+    font-size: 1.5em; /* Adjusted font size */
+    color: #e6f10d;
+    margin-bottom: 10px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.repair-card:hover h2 {
+    color: #ff0066; /* Change color on hover */
+}
+
+/* Card Paragraph */
+.repair-card p {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #aaa;
+}
+
+/* Heading and Title Styles */
+h1.heading {
+    font-size: 50px; /* Adjusted font size */
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 10px;
+    color: #00d1ff; /* Neon blue color */
+    text-shadow: 4px 4px 8px rgba(13, 0, 255, 0.8); /* Neon glow effect */
+}
+
+.title {
+    font-size: 2em; /* Adjusted font size */
+    color: #ff4b2b; /* Vibrant color */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Paragraph Styles */
+.para {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Link Styles */
+.a {
+    color: #d9d7ed; /* Blue color for the link */
+    text-decoration: line-through; /* Remove underline */
+    text-align: end;
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+.a:hover {
+    color: #d14; /* Darker color on hover */
+    text-decoration: underline; /* Underline on hover */
+    transform: scale(1.1); /* Slightly scale on hover */
+}
+
+.a:visited {
+    color: darkorchid; /* Purple color for visited links */
+}
+
+.a:active {
+    color: #f00; /* Red color when the link is being clicked */
+}
+
+/* Button Styles */
+.bt {
+    display: inline-block;
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 14px; /* Smaller font size */
+    font-weight: 600;
+    color: #fff;
+    background-color: #1172f1; /* Deep blue primary button color */
+    border: 2px solid transparent; /* Transparent border for the neon effect */
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added transition for shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* Relative positioning for the pseudo-element */
+    perspective: 1000px; /* Perspective for 3D effects */
+}
+
+.bt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Rounded corners */
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.3), rgba(72, 149, 239, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.bt:hover::before {
+    opacity: 1;
+}
+
+.bt:hover {
+    background-color: #e60707; /* Lighter shade of blue on hover */
+    transform: translateY(-2px) rotateY(10deg); /* Slight lift and rotate effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.bt:active {
+    background-color: #34f209; /* Darker navy blue when pressed */
+    transform: translateY(0) rotateY(0deg); /* Remove lift and rotate effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly reduce shadow */
+}
+
+.bt:focus {
+    outline: none;
+    box-shadow: 0 0 10px 10px rgba(16, 25, 37, 0.5); /* Custom focus ring */
+}
